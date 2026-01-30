@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci77onx4ppgb8"
-valid=false
+uid="uid://iyodk0ful7xu"
+path="res://.godot/imported/ball.png-d4a4bcef9ccf03d0071f393bf5d7669c.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/textures/ball.png"
+dest_files=["res://.godot/imported/ball.png-d4a4bcef9ccf03d0071f393bf5d7669c.ctex"]
 
 [params]
 

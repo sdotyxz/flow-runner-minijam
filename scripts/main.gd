@@ -2,6 +2,7 @@ extends Node2D
 
 var score = 0
 var game_over = false
+var game_started = false
 var speed = 300.0
 var spawn_timer = 0.0
 var spawn_interval = 1.5
@@ -39,6 +40,13 @@ func _process(delta):
 	if game_over:
 		if Input.is_action_just_pressed("ui_accept"):
 			restart_game()
+		return
+	
+	# 等待开始
+	if not game_started:
+		if Input.is_action_just_pressed("ui_accept") or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			game_started = true
+			ui.hide_message()
 		return
 	
 	# 自动向右流动
@@ -98,6 +106,7 @@ func cleanup_off_screen():
 
 func restart_game():
 	game_over = false
+	game_started = false
 	score = 0
 	speed = 300.0
 	spawn_interval = 1.5
@@ -113,6 +122,7 @@ func restart_game():
 	
 	ui.hide_game_over()
 	ui.update_score(score)
+	ui.show_message("Click to Start!\nUse Mouse to Move")
 
 func _on_player_collected():
 	score += 10
