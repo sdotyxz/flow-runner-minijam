@@ -1,6 +1,6 @@
-res://scenes/collectible.tscn::8dc053a909e638c9ccc26a23053be879::1769756237::res://.godot/exported/133200997/export-9e359d3c97d4eebaf817c72f6e0e54d5-collectible.scn
+res://scenes/collectible.tscn::3ba08d620f4dd620b568d63ef84a4b95::1769756311::res://.godot/exported/133200997/export-9e359d3c97d4eebaf817c72f6e0e54d5-collectible.scn
 res://scenes/main.tscn::16d7f62bf2691562e7f0be6c4a4ad2ec::1769748053::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
-res://scenes/obstacle.tscn::a8ff978984ed7596d90452b90137764e::1769756233::res://.godot/exported/133200997/export-4d229fce99bc30f190803dcf0c53b994-obstacle.scn
-res://scenes/player.tscn::24cd8c687bdb3303ee0dd0f6c788dcfa::1769756229::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/obstacle.tscn::ef0cc1c0711c146918fb868c30aeb754::1769756308::res://.godot/exported/133200997/export-4d229fce99bc30f190803dcf0c53b994-obstacle.scn
+res://scenes/player.tscn::5e78c0ed58a988d44ee6fb0852ca0df4::1769756305::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
 res://scenes/ui.tscn::49133ae5c657dc709dd4ed90ec40aa86::1769704411::res://.godot/exported/133200997/export-9211dc52ac9df169ba4fe77cbc1dc833-ui.scn
 res://default_env.tres::e79aa6a4fb92ba00525da4765a33741d::1769703416::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res

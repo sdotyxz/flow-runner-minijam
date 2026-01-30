@@ -7,10 +7,22 @@ var base_color = Color(0.2, 0.8, 1.0)
 
 @onready var sprite = $Sprite2D
 
+func _ready():
+	area_entered.connect(_on_area_entered)
+
 func _process(delta):
 	# 颜色变化
 	var hue = fmod(Time.get_ticks_msec() / 5000.0, 1.0)
 	sprite.modulate = Color.from_hsv(hue, 0.7, 1.0)
+
+func _on_area_entered(area):
+	if area.is_in_group("obstacles"):
+		_on_hit()
+		area.queue_free()
+	elif area.is_in_group("collectibles"):
+		emit_signal("collected")
+		area.queue_free()
+		play_collect_effect()
 
 func _on_hit():
 	emit_signal("hit")
