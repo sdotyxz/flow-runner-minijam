@@ -1,0 +1,23 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://default_env"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1"]
+sky_top_color = Color(0.05, 0.05, 0.15, 1)
+sky_horizon_color = Color(0.1, 0.1, 0.25, 1)
+ground_bottom_color = Color(0.02, 0.02, 0.05, 1)
+ground_horizon_color = Color(0.05, 0.05, 0.1, 1)
+
+[resource]
+background_mode = 2
+sky = SubResource("ProceduralSkyMaterial_1")
+ambient_light_source = 2
+ambient_light_color = Color(0.2, 0.2, 0.4, 1)
+ambient_light_energy = 0.5
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.8
+glow_strength = 1.1
+glow_bloom = 0.3
+glow_blend_mode = 0
+fog_enabled = true
+fog_light_color = Color(0.1, 0.15, 0.3, 1)
+fog_density = 0.001
