@@ -95,11 +95,15 @@ func spawn_obstacle():
 	obstacle.position = Vector2(1400, randf_range(100, 620))
 	obstacle.rotation_speed = randf_range(-2, 2)
 	obstacle_container.add_child(obstacle)
+	# 连接碰撞信号
+	obstacle.hit.connect(_on_player_hit)
 
 func spawn_collectible():
 	var collectible = preload("res://scenes/collectible.tscn").instantiate()
 	collectible.position = Vector2(1400, randf_range(100, 620))
 	collectible_container.add_child(collectible)
+	# 连接收集信号
+	collectible.collected.connect(_on_player_collected)
 
 func cleanup_off_screen():
 	for obstacle in obstacle_container.get_children():
@@ -135,7 +139,7 @@ func _on_player_collected():
 	if sound_collect and sound_collect.playing == false:
 		sound_collect.play()
 
-func _on_player_hit():
+func _on_player_hit(obstacle):
 	game_over = true
 	ui.show_game_over(score)
 	if sound_hit:
