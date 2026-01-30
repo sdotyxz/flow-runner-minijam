@@ -10,7 +10,7 @@ extends CanvasLayer
 
 func _ready():
 	# 显示测试信息
-	test_label.text = "Hello World! Game loaded at " + Time.get_datetime_string_from_system()
+	test_label.text = "Hello World!"
 
 func update_score(value):
 	score_label.text = "Score: " + str(value)
