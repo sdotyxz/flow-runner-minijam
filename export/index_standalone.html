@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Flow Runner - Mini Jam 203</title>
+    <style>
+        body { 
+            background: linear-gradient(180deg, #0a0a1a 0%, #1a1a3a 50%, #2a2a4a 100%);
+            color: #00ffff; 
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: min(48px, 8vw);
+            text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #0088ff;
+            margin: 0 0 10px 0;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow { from { text-shadow: 0 0 20px #00ffff; } to { text-shadow: 0 0 40px #00ffff, 0 0 80px #0088ff; } }
+        .subtitle { color: #ff6b6b; font-size: min(24px, 5vw); margin-bottom: 30px; }
+        .info { color: #88ccff; font-size: min(16px, 3vw); margin: 10px; max-width: 90%; }
+        .loader {
+            border: 4px solid rgba(0,255,255,0.2);
+            border-top: 4px solid #00ffff;
+            border-radius: 50%;
+            width: min(60px, 12vw);
+            height: min(60px, 12vw);
+            animation: spin 1.5s linear infinite;
+            margin: 30px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .status { color: #ffaa00; margin-top: 20px; font-size: min(14px, 3vw); }
+        .ball {
+            width: 40px; height: 40px; background: radial-gradient(circle at 30% 30%, #00ffff, #0088ff);
+            border-radius: 50%; box-shadow: 0 0 30px #00ffff; margin: 20px auto;
+            animation: pulse 1s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    </style>
+</head>
+<body>
+    <div class='ball'></div>
+    <h1>FLOW RUNNER</h1>
+    <div class='subtitle'>Mini Jam 203 - Theme: Flow</div>
+    <div class='loader'></div>
+    <p class='info'>Avoid meteors, collect stars!</p>
+    <p class='info'>Control your energy ball with mouse or touch</p>
+    <p class='status'>Loading Godot WebAssembly...</p>
+    <p class='info' style='color: #666; font-size: 12px;'>Game URL: http://192.168.3.22:8080/export/</p>
+    <script>
+        // Auto-refresh check
+        setTimeout(function() {
+            document.querySelector('.status').textContent = 'If nothing loads, please refresh the page.';
+        }, 15000);
+    </script>
+</body>
+</html>
