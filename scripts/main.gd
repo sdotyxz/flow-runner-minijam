@@ -9,6 +9,7 @@ var spawn_interval = 1.5
 
 @onready var player = $Player
 @onready var ui = $UI
+@onready var test_label = $UI/TestLabel
 @onready var obstacle_container = $ObstacleContainer
 @onready var collectible_container = $CollectibleContainer
 
@@ -24,6 +25,10 @@ func _ready():
 	
 	ui.update_score(score)
 	ui.show_message("Click to Start!\nUse Mouse to Move")
+	
+	# 更新测试标签
+	if test_label:
+		test_label.text = "Hello World! Game loaded at " + Time.get_datetime_string_from_system()
 
 func setup_audio():
 	sound_collect = AudioStreamPlayer.new()

@@ -27,7 +27,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.has_method("_on_hit"):
 		body._on_hit()
-	queue_free()
+		queue_free()
 	elif body.is_in_group("player"):
 		emit_signal("hit")
 		queue_free()

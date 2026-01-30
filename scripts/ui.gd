@@ -3,9 +3,14 @@ extends CanvasLayer
 @onready var score_label = $ScoreLabel
 @onready var speed_label = $SpeedLabel
 @onready var message_label = $MessageLabel
+@onready var test_label = $TestLabel
 @onready var game_over_panel = $GameOverPanel
 @onready var final_score = $GameOverPanel/VBoxContainer/FinalScore
 @onready var restart_label = $GameOverPanel/VBoxContainer/RestartLabel
+
+func _ready():
+	# 显示测试信息
+	test_label.text = "Hello World! Game loaded at " + Time.get_datetime_string_from_system()
 
 func update_score(value):
 	score_label.text = "Score: " + str(value)
