@@ -1,5 +1,7 @@
 extends Area2D
 
+signal hit
+
 var rotation_speed = 0.0
 var wobble_offset = 0.0
 var wobble_speed = 2.0
@@ -26,3 +28,6 @@ func _on_body_entered(body):
 	if body.has_method("_on_hit"):
 		body._on_hit()
 	queue_free()
+	elif body.is_in_group("player"):
+		emit_signal("hit")
+		queue_free()

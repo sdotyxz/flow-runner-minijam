@@ -43,10 +43,13 @@ func reset_flow():
 	trail_positions.clear()
 	scale = Vector2.ONE
 
+func _on_hit():
+	emit_signal("hit")
+	play_hit_effect()
+
 func _on_body_entered(body):
 	if body.is_in_group("obstacles"):
-		emit_signal("hit")
-		play_hit_effect()
+		_on_hit()
 
 func _on_area_entered(area):
 	if area.is_in_group("collectibles"):
