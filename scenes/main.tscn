@@ -107,6 +107,9 @@ texture = ExtResource("6_small")
 [node name="Player" parent="." instance=ExtResource("2_player")]
 position = Vector2(200, 360)
 
+[connection signal="collected" from="Player" to="." method="_on_player_collected"]
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("3_ui")
 
